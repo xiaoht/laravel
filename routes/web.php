@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/about' , 'SiteController@about');
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/email/verify/{token}', 'EmailController@verify')->name('email.verify');
+Route::resource('question' , 'QuestionController');

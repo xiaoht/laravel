@@ -1,0 +1,7 @@
+div.alert{
+    position: relative;
+    top: 200px;
+}
+#flash-overlay-modal{
+    z-index: 9999;
+}
